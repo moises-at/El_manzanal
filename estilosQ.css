@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;900&family=Rubik:ital,wght@0,400;0,500;0,600;1,300&display=swap');
+
+body {
+    font-family: 'Rubik', serif;
+    font-size: 18px;
+    color: #202E30;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(recursos/patronp.jpg);
+/*    background-image: url('recursos/patronp.jpg'); /* Ruta a tu imagen de fondo */*/
+    background-size: auto; /* Mantener el tamaño original */
+    background-repeat: repeat; /* Repetir la imagen */
+    backdrop-filter: blur(3px); /* Aplicar un desenfoque al fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background-image: url('recursos/Grano-Pelicula-01.jpg'); /* Ruta a tu imagen de ruido */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1; /* Ajusta la opacidad del ruido según tu preferencia */
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+label{
+    color: #202E30;
+}
+h2{
+    color: #3cb371;
+}
+.container {
+    background-color: #ede0d8;
+    box-shadow: 40px 40px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 800px;
+    max-height: 1900px;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0; /* Añade margen superior e inferior de 20px */
+}
+
+header {
+    background-color: #3cb371; /* Color de fondo del encabezado */
+    color: white;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+section {
+    padding: 20px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+b {
+    color: #3cb371;
+}
+
+/* Imágenes */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Enlaces */
+a {
+    color: #b85983;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #3cb371;
+}
+
+/* Lista desordenada */
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #3cb371; /* Color de fondo del pie de página */
+    color: white;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 0 0 10px 10px; /* Bordes redondeados solo en la parte inferior */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}

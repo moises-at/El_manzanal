@@ -1,0 +1,135 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;900&family=Rubik:ital,wght@0,400;0,500;0,600;1,300&display=swap');
+
+/*@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;900&family=Rubik:ital,wght@0,300;0,400;0,900;1,300&display=swap');*/
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(recursos/fmanzana.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 1.5s, transform 1s;
+}
+
+nav.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+h1 img {
+    max-width: 250px;
+    padding: 0px  0px 20px  110px ;
+    height: auto;
+}
+
+ul li {
+    display: inline-block;
+    padding: 30px 30px;
+    padding-right: 50px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: greenyellow;
+}
+.frase-destacada h2,
+.frase-destacada p {
+    opacity: 0;
+    transition: opacity 3s; /* Ajusta la duración de la transición según tus preferencias */
+}
+.frase-destacada.visible h2,
+.frase-destacada.visible p {
+    opacity: 1;
+}
+
+.frase-destacada {
+    padding: 0px; /* Margen interno en los cuatro lados */
+    margin: 0px auto; /* Centrar el párrafo horizontalmente */
+    max-width: 900px; /* Ancho máximo del párrafo */
+    text-align: justify; /* Centrar el texto horizontalmente */
+    line-height: 0.7; /* Ajusta el valor para reducir el interlineado */
+    padding-bottom: 0px;
+}
+
+.frase-destacada h2 {
+    font-size: 65px; /* Tamaño de fuente para el encabezado */
+    color: greenyellow; /* Color de texto para el encabezado */
+    padding-bottom: 0px;
+}
+
+.frase-destacada p {
+    font-size: 23px; /* Tamaño de fuente para el párrafo */
+    color: white; /* Color de texto para el párrafo */
+    font-weight: 400;
+    padding-top: 0px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo a tu preferencia con transparencia */
+    color: white; /* Cambia el color del texto a tu preferencia */
+    text-align: center;
+    padding: 10px; /* Ajusta el espaciado interior según tus necesidades */
+    border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
+    border-top-right-radius: 10px; /* Redondea la esquina superior derecha */
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el footer horizontalmente */
+    position: fixed;
+    bottom: 0;
+    font-weight: 900;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px); /* Aplica el efecto de desenfoque (ajusta el valor según tus preferencias) */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 2s, transform 1s; /* Aumenta la duración a 1 segundo */
+
+}
+footer.visible {
+    opacity: 0.8;
+    transform: translateY(0);
+}
+
+
+nav {
+    padding-top: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent 100%);
+    backdrop-filter: blur(1.4px); /* Ajusta el valor según tus preferencias */
+    z-index: -2;
+}
+
+
